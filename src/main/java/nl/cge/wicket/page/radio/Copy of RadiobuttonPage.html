@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<wicket:extend>
+	<h1>Radiobutton page</h1>
+	<span wicket:id="feedback">feedbackmessages will be put here</span>
+	<form wicket:id="myForm" class="form-horizontal">
+		<fieldset>
+			<legend>Postadres</legend>
+			<span wicket:id="postadres"></span>
+		</fieldset>
+		<fieldset>
+			<legend>Woonadres</legend>
+			<span wicket:id="woonadres"></span>
+		</fieldset>
+		<fieldset>
+			<legend>Notarisadres</legend>
+			<span wicket:id="notarisadres"></span>
+		</fieldset>
+		<button class="btn">Opslaan</button>
+	</form>
+</wicket:extend>
+</body>
+</html>
