@@ -1,6 +1,7 @@
 package nl.cge.wicket;
 
-import nl.cge.wicket.page.radio.RadiobuttonPage;
+import nl.cge.wicket.page.radio.RadiogroupPage;
+import nl.cge.wicket.page.radiogroup.RadiogroupPage2;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
@@ -14,7 +15,7 @@ public class WicketApplication extends WebApplication
 {    	
 	@Override
 	public Class<? extends WebPage> getHomePage() {
-		return RadiobuttonPage.class;
+		return RadiogroupPage2.class;
 	}
 
 	@Override

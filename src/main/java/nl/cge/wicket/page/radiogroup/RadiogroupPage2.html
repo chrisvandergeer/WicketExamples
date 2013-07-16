@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<wicket:extend>
+	<h1>Radiobutton page</h1>
+		<form wicket:id="form" class="form-horizontal">	
+			<div wicket:id="radioGroup">
+				<table class="table">
+					<tr wicket:id="listView">
+						<td>
+							<input type="radio" wicket:id="radio" />
+						</td>
+						<td>
+							<span wicket:id="straat"></span>
+							<span wicket:id="huisnummer"></span><br/>
+							<span wicket:id="postcode"></span><br/>
+							<span wicket:id="plaats"></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<button class="btn">Opslaan</button>
+		</form>
+	</wicket:extend>
+</body>
+</html>
