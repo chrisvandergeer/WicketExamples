@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<wicket:extend>
+	<h1>Queue info</h1>
+	<form wicket:id="form">
+	  <fieldset>
+	    <label>Omgeving</label>
+	    <select wicket:id="omgeving"></select>
+	   	<label>Queue</label>
+	   	<select wicket:id="queue"></select>
+	  </fieldset>
+	  <input type="submit" class="btn" value="Submit" />
+	</form>
+	<pre wicket:id="result" class="alert alert-success"></pre>
+	<pre wicket:id="errors" class="alert alert-error"></pre>
+</wicket:extend>
+</body>
+</html>

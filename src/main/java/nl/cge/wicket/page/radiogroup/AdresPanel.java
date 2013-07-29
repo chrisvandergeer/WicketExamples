@@ -7,14 +7,15 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
 
-public class RadioPanel extends Panel {
+public class AdresPanel extends Panel {
 
-	public RadioPanel(String id, IModel<Adres> model) {
+	public AdresPanel(String id, IModel<Adres> model) {
 		super(id, model);
 		add(new Label("straat", new PropertyModel<String>(model, "straat")));
 		add(new Label("huisnummer", new PropertyModel<Integer>(model, "huisnummer")));
 		add(new Label("postcode", new PropertyModel<String>(model, "postcode")));
 		add(new Label("plaats", new PropertyModel<String>(model, "plaats")));
 	}
+	
 
 }

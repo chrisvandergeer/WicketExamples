@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="antscripts" default="hello">
+
+    <target name="hello">
+        <echo>Queue info for queue ${queue} on ${omgeving}</echo>
+    </target>
+    
+</project>

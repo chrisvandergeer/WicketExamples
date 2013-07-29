@@ -19,7 +19,7 @@ public class RadiogroupPage2 extends BootstrapPage {
 	public RadiogroupPage2() {
 		List<Adres> adressen = Adres.findAll();
 		adressen.add(new Adres());
-		Form<Void> form = new Form<Void>("form") {
+		final Form<Void> form = new Form<Void>("form") {
 
 			@Override
 			protected void onSubmit() {
@@ -28,15 +28,16 @@ public class RadiogroupPage2 extends BootstrapPage {
 			}
 			
 		};
-		RadioGroup<Adres> radioGroup = new RadioGroup<Adres>("radioGroup", Model.of(adressen.get(0)));		
- 		ListView<Adres> listView = new ListView<Adres>("listView", adressen) {
+		final RadioGroup<Adres> radioGroup = new RadioGroup<Adres>("radioGroup", new  Model<Adres>());		
+ 		final ListView<Adres> listView = new ListView<Adres>("listView", adressen) {
 			@Override
 			protected void populateItem(ListItem<Adres> item) {
 				item.add(new Radio<Adres>("radio", item.getModel()));
-				item.add(new Label("straat", new PropertyModel<String>(item.getModel(), "straat")));
-				item.add(new Label("huisnummer", new PropertyModel<Integer>(item.getModel(), "huisnummer")));
-				item.add(new Label("postcode", new PropertyModel<String>(item.getModel(), "postcode")));
-				item.add(new Label("plaats", new PropertyModel<String>(item.getModel(), "plaats")));				
+				if (item.getModelObject().isLeeg()) {
+					item.add(new AdresInputPanel("adrespanel", item.getModel()));
+				} else {
+					item.add(new AdresPanel("adrespanel", item.getModel()));
+				}				
 			}			
 			
 		};

@@ -1,9 +1,13 @@
 package nl.cge.wicket.bootstrap;
 
+import nl.cge.wicket.page.ant.QueueinfoPage;
+import nl.cge.wicket.page.radiogroup.RadiogroupPage2;
+
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.request.resource.CssResourceReference;
@@ -19,14 +23,22 @@ public abstract class BootstrapPage extends WebPage {
 
 	public BootstrapPage() {
 		super();
+		init();
 	}
 
 	public BootstrapPage(IModel<?> model) {
 		super(model);
+		init();
 	}
 
 	public BootstrapPage(PageParameters parameters) {
 		super(parameters);
+		init();
+	}
+	
+	private void init() {
+		add(new BookmarkablePageLink<QueueinfoPage>("pagelinkQueueinfo", QueueinfoPage.class));
+		add(new BookmarkablePageLink<QueueinfoPage>("pagelinkOther", RadiogroupPage2.class));
 	}
 
 	@Override
