@@ -1,7 +1,9 @@
 package nl.cge.wicket.bootstrap;
 
 import nl.cge.wicket.page.ant.QueueinfoPage;
+import nl.cge.wicket.page.explist.ExpandableListPage;
 import nl.cge.wicket.page.radiogroup.RadiogroupPage2;
+import nl.cge.wicket.page.simpleformpage.SimpleFormPage;
 
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
@@ -39,6 +41,8 @@ public abstract class BootstrapPage extends WebPage {
 	private void init() {
 		add(new BookmarkablePageLink<QueueinfoPage>("pagelinkQueueinfo", QueueinfoPage.class));
 		add(new BookmarkablePageLink<QueueinfoPage>("pagelinkOther", RadiogroupPage2.class));
+		add(new BookmarkablePageLink<QueueinfoPage>("expandableList", ExpandableListPage.class));
+		add(new BookmarkablePageLink<QueueinfoPage>("simpleForm", SimpleFormPage.class));
 	}
 
 	@Override

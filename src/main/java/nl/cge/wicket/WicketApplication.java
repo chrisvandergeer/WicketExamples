@@ -1,5 +1,6 @@
 package nl.cge.wicket;
 
+import nl.cge.wicket.aantekeningen.page.AantekeningenPage;
 import nl.cge.wicket.page.ant.QueueinfoPage;
 
 import org.apache.wicket.markup.html.WebPage;
@@ -14,7 +15,7 @@ public class WicketApplication extends WebApplication
 {    	
 	@Override
 	public Class<? extends WebPage> getHomePage() {
-		return QueueinfoPage.class;
+		return AantekeningenPage.class;
 	}
 
 	@Override
